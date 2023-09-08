@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="header">
+        <div id="container">
+            <nav class="navbar">
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="navbar-links">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                </div>
+                
+            </nav>
+        <div class="header-text">
+                <h1><span>Portfolio</span></h1>
+            </div>
+        </div>
+    </div>
+    
+    <!----------------about me-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"></div>
+                <img src="Images/About me.png.jpg" alt="Your Image" class="round-image">
+                <div class="about-col-2">
+                    <h2 class="sub-title">About Me</h2>
+                    <p>HI, My name is Zacharias Arif I'am a Full-Stack
+                        Software Engineer . I was fresh to this software field 
+                        but with the help of General Assembly, Finally I'am a software 
+                        engineer today and I'am ready for a debugging 
+                        challenges ahead.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills|Languages</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Java Script</li>
+                            <li>Node.JS</li>
+                            <li>React.JS</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+   <!--------Project-->
+
+   <section id="projects" class="section">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1 Space Battle</h3>
+            <p>Description of project 1 goes here.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2 Goblin and Hero</h3>
+            <p>Description of project 2 goes here.</p>
+        </div>
+        <div class="project">
+            <h3>Project 3</h3>
+            <p>Description of project 3 goes here.</p>
+        </div>
+        <!-- Add more project sections as needed -->
+    </div>
+</section>
+
+<!---Resume-->
+
+<section id="resume" class="section">
+    <div class="container">
+        <h2>Resume</h2>
+        <p>Click the button below to download my resume in PDF format:</p>
+        <a href="Images/Resume.pdf.docx" download class="btn">Download Resume</a>
+        <!-- Alternatively, you can provide a link to an online version of your resume -->
+        <!-- <a href="https://example.com/your-resume" target="_blank" class="btn">View Online Resume</a> -->
+    </div>
+</section>
+
+    <!----------Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact</h1>
+                
+                    <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/zachariassoftwareenineer">
+                        <img src="Images/linkedin.png">
+                       </a>
+                       <a href="https://zachariasarif1@gmail.com">
+                        <img src="Images/mail.png">
+                       </a>
+                       <a href="https://github.com/Zach3832/Zacharias">
+                        <img src="Images/github.png">
+                       </a>
+                    </div>
+                   
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                       <input type="email" name="Email" placeholder="Your Email" required>
+                       <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                       <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright©Zacharias/2023</p>
+        </div>
+    </div>
+
+
+<script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
